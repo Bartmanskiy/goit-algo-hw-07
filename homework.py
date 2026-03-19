@@ -83,10 +83,8 @@ def input_error(func):
         try:
             return func(*args, **kwargs)
         except ValueError as e:
-            # Повертаємо текст помилки з виключення
             return f"Error: {e}"
         except IndexError:
-            # Коли не вистачає аргументів
             return "Error: Not enough arguments."
     return inner
 
